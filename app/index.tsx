@@ -1,13 +1,29 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
-import Test from '../screens/test'
+import React, { useEffect, useState } from 'react'
 import url from "../variables"
+import axios from 'axios'
+
 
 
 const index = () => {
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
 
+
+  const handleSubmit= async function()
+  {
+    const data={
+      email:email,
+      password:password
+    }
+    try {
+      const response=await axios.post("http://10.18.3.88:3000/register",data)
+      console.log(response.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
 
   return (
     <View >
@@ -23,12 +39,18 @@ const index = () => {
       </View>
       <View className=' bg-white w-80 h-12 border rounded-md'>
         <TextInput placeholder='Enter password...' className=' text-xl p-1 text-gray-600'
-          onChangeText={(text)=>setPassword(text)}/>
+          onChangeText={(text)=>setPassword(text)} />
       </View>
       </View>
       <View className=' justify-center items-center mt-10 '>
-        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center'>
+        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center' onPress={()=>handleSubmit()}>
           <Text className=' text-white text-xl'>Sign In</Text>
+        </TouchableOpacity>
+      </View>
+      <View className=' flex-row justify-center items-center mt-10'>
+        <Text className=' text-lg'>Dont't have an account? </Text>
+        <TouchableOpacity>
+        <Text className=' text-lg text-blue-500 underline'>Sign up</Text>
         </TouchableOpacity>
       </View>
     </View>
