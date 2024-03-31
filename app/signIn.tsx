@@ -2,9 +2,9 @@ import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import url from '../variables'
 import axios from 'axios'
-import { useSafeAreaFrame } from 'react-native-safe-area-context'
 import { router } from 'expo-router'
-
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import auth from '../firebaseConfig'
 
 
 
@@ -25,6 +25,23 @@ const signIn = () => {
       console.log(error)
     }
   }
+
+  const signIn=function()
+  {
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      postData();
+      router.push("(tabs)/home")
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(error)
+  });
+
+  }
+
 
 
     return (
@@ -47,7 +64,7 @@ const signIn = () => {
       </View>
       </View>
       <View className=' justify-center items-center mt-10 '>
-        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center' onPress={()=>router.back()}>
+        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center' onPress={()=>signIn()}>
           <Text className=' text-white text-xl'>Sign In</Text>
         </TouchableOpacity>
       </View>

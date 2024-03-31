@@ -3,27 +3,25 @@ import React, { useEffect, useState } from 'react'
 import url from "../variables"
 import axios from 'axios'
 import { router } from 'expo-router'
+import auth from '../firebaseConfig'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 
 const index = () => {
-  const [email,setEmail]=useState("")
-  const [password,setPassword]=useState("")
+  const [email,setEmail]=useState<string>("")
+  const [password,setPassword]=useState<string>("")
 
 
-  const handleSubmit= async function()
-  {
-    const data={
-      email:email,
-      password:password
-    }
-    try {
-      const response=await axios.post("http://10.18.3.88:3000/register",data)
-      console.log(response.data)
-    } catch (error) {
-      console.log(error)
-    }
+  const logIn=function() {
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    router.push("(tabs)/home")
+  })
+  .catch((error:any) => {
+    console.log(error)
+  });
+
   }
-  
 
   return (
     <View  className=' bg-white h-full'>
@@ -43,7 +41,7 @@ const index = () => {
       </View>
       </View>
       <View className=' justify-center items-center mt-10 '>
-        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center' onPress={()=>handleSubmit()}>
+        <TouchableOpacity className=' bg-black w-80 h-14 rounded-full justify-center items-center' onPress={()=>logIn()}>
           <Text className=' text-white text-xl'>Sign In</Text>
         </TouchableOpacity>
       </View>
