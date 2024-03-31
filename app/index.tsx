@@ -2,7 +2,7 @@ import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import url from "../variables"
 import axios from 'axios'
-
+import { router } from 'expo-router'
 
 
 const index = () => {
@@ -26,7 +26,7 @@ const index = () => {
   
 
   return (
-    <View >
+    <View  className=' bg-white h-full'>
       <View className=' justify-center items-center p-0'>
       <Image source={{uri:url}}
        className='  h-28 w-28 mt-40'/>
@@ -49,7 +49,7 @@ const index = () => {
       </View>
       <View className=' flex-row justify-center items-center mt-10'>
         <Text className=' text-lg'>Dont't have an account? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>router.push("signIn")}>
         <Text className=' text-lg text-blue-500 underline'>Sign up</Text>
         </TouchableOpacity>
       </View>
