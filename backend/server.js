@@ -28,8 +28,15 @@ app.post("/register",async (req,res)=>{
     
 })
 
-app.get("/",async (req,res)=>{
-    res.send("Hello this is working")
+
+app.get("/info",async(req,res)=>{
+    const userInfo=await User.find(req.query);
+    res.send(userInfo)
+})
+
+app.get("/data",async(req,res)=>{
+    const userInfo=await User.find()
+    res.send(userInfo)
 })
 
 const start=async function()

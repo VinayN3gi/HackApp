@@ -15,10 +15,10 @@ const signIn = () => {
   const signIn=function()
   {
     signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    console.log('Success')
-    router.push("./(tabs)/home")
+    .then((userCredential) => {
+      const user = userCredential.user;
+      router.push("./(tabs)/home")
+      console.log('Success')
   })
   .catch((error:any) => {
     const errorCode = error.code;

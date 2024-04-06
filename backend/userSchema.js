@@ -32,6 +32,13 @@ const userSchema= new mongoose.Schema({
     weight:{
         type:String,
         required:[true,"Weight  must be provided"]
+    },
+    password:{
+        type:String,
+        required:[true,"Password must be specified"]
+    },
+    uid:{
+        type:String,
     }
 })
 
