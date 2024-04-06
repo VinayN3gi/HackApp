@@ -2,6 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Border, FontSize, FontFamily, Color } from "../GlobalStyles"
+import { router } from "expo-router";
 
 const Onboarding = () => {
   return (
@@ -13,19 +14,19 @@ const Onboarding = () => {
         />
       </View>
       <View className=" justify-center items-center mt-24">
-        <Text className=" text-3xl font-medium">Log in to get started</Text>
+        <Text className=" text-3xl font-medium">Let's to get started</Text>
       </View>
       <View className=" justify-center items-center mt-5">
         <Text className=" text-xl font-light">Login to get all your medical</Text>
         <Text className=" text-xl font-light">records in one place</Text>
       </View>
       <View className=" justify-center items-center  mt-24">
-      <TouchableOpacity className=" bg-blue-400 w-[75%] h-14 rounded-full justify-center items-center">
+      <TouchableOpacity className=" bg-blue-400 w-[75%] h-14 rounded-full justify-center items-center" onPress={()=>router.push("signIn")}>
         <Text className=" text-white font-semibold text-xl">Sign in</Text>
       </TouchableOpacity>
       </View>
       <View className=" justify-center items-center mt-6">
-        <TouchableOpacity className=" bg-white w-[75%] h-14 rounded-full justify-center items-center border-blue-400 border-2">
+        <TouchableOpacity className=" bg-white w-[75%] h-14 rounded-full justify-center items-center border-blue-400 border-2" onPress={()=>router.push("signUp")}>
           <Text className=" font-semibold text-xl text-blue-400">Sign Up</Text>
         </TouchableOpacity>
       </View>
