@@ -10,11 +10,11 @@ export const unstable_setting={
 const Rootlayout = () => {
   return (
     <Stack>
-        <Stack.Screen name="qrScreen" options={{headerShown:false}}/>
-        <Stack.Screen name="signIn" options={{headerShown:false}}/>
         <Stack.Screen name="index" options={{headerShown:false}}/>
-        <Stack.Screen name="signUp" options={{headerShown:false}}/>
         <Stack.Screen name="(tabs)" options={{headerShown:false}}/>
+        <Stack.Screen name="signIn" options={{headerShown:false}}/>
+        <Stack.Screen name="qrScreen" options={{headerShown:false}}/>
+        <Stack.Screen name="signUp" options={{headerShown:false}}/>
         <Stack.Screen name="register" options={{headerShown:false}}/>
     </Stack>
   )
