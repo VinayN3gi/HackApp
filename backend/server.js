@@ -28,6 +28,9 @@ app.post("/register",async (req,res)=>{
     
 })
 
+app.get("/",async (req,res)=>{
+    res.send("Hello this is working")
+})
 
 const start=async function()
 {

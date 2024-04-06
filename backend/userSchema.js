@@ -6,15 +6,15 @@ const userSchema= new mongoose.Schema({
         required:[true,"Name must be provided"]
     },
     age:{
-        type:Number,
+        type:String,
         required:[true,"Age must be provided"]
     },
     contactNo:{
-        type:Number,
+        type:String,
         required:[true,"Contact No. must be provided"]
     },
     emergencyContactNo:{
-        type:Number,
+        type:String,
         required:[true," Emergency Contact No. must be provided"]
     },
     bloodGroup:{
@@ -26,11 +26,11 @@ const userSchema= new mongoose.Schema({
         required:[true,"Date of Birth must be provided"]
     },
     height:{
-        type:Number,
+        type:String,
         required:[true,"Height must be provided"]
     },
     weight:{
-        type:Number,
+        type:String,
         required:[true,"Weight  must be provided"]
     }
 })
