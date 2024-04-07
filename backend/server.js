@@ -5,7 +5,7 @@ const cors=require("cors")
 const app=express()
 const port=3000
 const connectionString="mongodb+srv://user1:1234@cluster1.qjmq8au.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
-
+const Report=require("./reportSchema")
 
 app.use(express.json())
 
@@ -28,12 +28,25 @@ app.post("/register",async (req,res)=>{
     
 })
 
+app.post("/report",async(req,res)=>{
+    try {
+        const report=await Report.create(req.body)
+        console.log(report)
+        res.send(report)
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 app.get("/info",async(req,res)=>{
     const userInfo=await User.find(req.query);
     res.send(userInfo)
 })
 
+app.get("/report",async (req,res)=>{
+    const report=await Report.find({})
+    res.send(report)
+})
 app.get("/data",async(req,res)=>{
     const userInfo=await User.find()
     res.send(userInfo)

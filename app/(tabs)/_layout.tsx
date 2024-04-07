@@ -12,18 +12,18 @@ const TabLayout = () => {
         title:"Home",
         tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
       }}/>
+      <Tabs.Screen name="upload"
+      options={{
+        title:"Upload",
+        headerShown:false,
+        tabBarIcon:({color})=><AntDesign name="upload" size={24} color="black" />
+      }} />
       <Tabs.Screen name="scan"
       options={{
         title: 'Scan',
         headerShown:false,
         tabBarIcon: ({ color }) => <AntDesign name="scan1" size={24} color="black" />
       }}/>
-        <Tabs.Screen name="upload"
-        options={{
-          title:"Upload",
-          headerShown:false,
-          tabBarIcon:({color})=><AntDesign name="upload" size={24} color="black" />
-        }} />
         <Tabs.Screen name="profile"
         options={{
           title: 'Profile',
