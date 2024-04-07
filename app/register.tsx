@@ -47,48 +47,48 @@ const register = () => {
       <Text className=' font-semibold text-3xl text-blue-400' >Details</Text>
     </View>
     <View className=' justify-center items-center mt-6 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Name ' className=' ml-3 text-lg' onChangeText={(text)=>setName(text)} value={name}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Age' className=' ml-3 text-lg' onChangeText={(text)=>setAge(text)} value={age}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Blood Broup' className=' ml-3 text-lg' value={bGroup} onChangeText={(text)=>setbGroup(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Height' className=' ml-3 text-lg' value={height} onChangeText={(text)=>setHeight(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Date of Birth' className=' ml-3 text-lg' value={DOB} onChangeText={(text)=>setDOB(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Weight' className=' ml-3 text-lg' value={weight} onChangeText={(text)=>setWeight(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Contact No.' className=' ml-3 text-lg' value={number} onChangeText={(text)=>setNumber(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
         <TextInput placeholder='Emergency Contact No.' className=' ml-3 text-lg' value={emNumber} onChangeText={(text)=>setEmNumber(text)}/>
       </View>
     </View>
     <View className=' justify-center items-center mt-3 mb-3'>
-      <View className='w-[80%]  h-14 justify-center rounded-lg border-gray-300 border'>
-        <TextInput placeholder='Password' className=' ml-3 text-lg' value={password} onChangeText={(text)=>setPass(text)}/>
+      <View className='w-[80%]  h-12 justify-center rounded-lg border-gray-300 border'>
+        <TextInput placeholder='Password' className=' ml-3 text-lg' value={password} onChangeText={(text)=>setPass(text)} secureTextEntry/>
       </View>
     </View>
     <View className=" justify-center items-center w-full mt-2">

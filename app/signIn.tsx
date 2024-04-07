@@ -63,7 +63,7 @@ const signIn = () => {
       </View>
       </View>
       </View>
-      <View className=' flex-row  justify-center items-center mt-2' style={{position:"absolute", marginTop:700,marginLeft:80}}>
+      <View className=' flex-row  justify-center items-center mt-2' style={{position:"absolute", marginTop:700,marginLeft:60}}>
         <View>
           <Text className=' text-lg font-light'>Don't have an account ?</Text>
         </View>

@@ -24,12 +24,6 @@ const TabLayout = () => {
         headerShown:false,
         tabBarIcon: ({ color }) => <AntDesign name="scan1" size={24} color="black" />
       }}/>
-        <Tabs.Screen name="profile"
-        options={{
-          title: 'Profile',
-          headerShown:false,
-          tabBarIcon: ({ color }) =><Feather name="user" size={24} color="black" />
-        }}/>
     </Tabs>
   )
 }
